@@ -9,6 +9,7 @@ import App from './App';
 import Lister from "./components/Lister";
 import useToken from "./components/useToken";
 import {Nav} from "./Nav";
+import Update from "./components/Update";
 
 
 function Router() {
@@ -42,6 +43,9 @@ function Router() {
                     </Route>
                     <Route path="/preferences">
                         <Preferences/>
+                    </Route>
+                    <Route path="/update">
+                        <Update setToken={setToken} props={token}/>
                     </Route>
                 </Switch>
 </BrowserRouter>

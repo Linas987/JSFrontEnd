@@ -21,9 +21,8 @@ export function Nav() {
     useEffect(()=> {
     if(me)
     {newList([
-        <a className="insite">news</a>,
-        <Link to={"/list"} className="insite">connect</Link>,
-        <a className="insite">upload</a>,
+        <Link to={"/update"} className="insite">update profile</Link>,
+        <Link to={"/list"} className="insite">list</Link>,
         <Link to={"/dashboard"} className="insite">profile</Link>,
         <Link to={"/"} onClick={logout} className="insite">logout</Link>
     ]);
