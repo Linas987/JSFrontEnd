@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'JSAzureFrontend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B4547E9E235B4B1F88BAB721437116A4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F8DED00163DF4B758679B47EA94CF7EF }}
           package: .
