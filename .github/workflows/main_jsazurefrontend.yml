@@ -19,13 +19,11 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '17.x'
-        env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
+          node-version: '18.x'
 
       - name: npm install, build, and test
         run: |
-          npm install
+          npm install --legacy-peer-deps
           npm run build 
           
       - name: Upload artifact for deployment job
