@@ -20,7 +20,7 @@ jobs:
           submodules: true
           lfs: false
       - name: Install Dependencies and Build
-        id: builddeploy
+        id: install
         run: |
           # Add the --force flag to npm install to force dependency resolution
           npm install --force
