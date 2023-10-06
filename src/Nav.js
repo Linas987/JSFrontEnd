@@ -18,15 +18,19 @@ export function Nav() {
             <a href={"/dashboard"} className="insite">login</a>
         ]
     );
+
+    const dependancyArr = [ localStorage.getItem('token')];
     useEffect(()=> {
-    if(me)
-    {newList([
+        if(me){
+        newList([
         <Link to={"/update"} className="insite">update profile</Link>,
         <Link to={"/list"} className="insite">list</Link>,
         <Link to={"/dashboard"} className="insite">profile</Link>,
         <Link to={"/"} onClick={logout} className="insite">logout</Link>
-    ]);
-    }},[ localStorage.getItem('token')])
+        ]);}
+        // eslint-disable-next-line
+    },dependancyArr)
+
     return(
     <header id="header" className="header is--white">
         <div className={"row"} style={{color: 'white', padding: '1%'}}>
