@@ -1,12 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Nav} from "./Nav";
 import Spin from './Spin'
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Router from './Router';
-import {BrowserRouter} from 'react-router-dom';
 
 //this part just redirects to '/dashboard' if the end of url is just '/'
 if(window.location.href.substring(window.location.href.lastIndexOf('/') + 1)==="")

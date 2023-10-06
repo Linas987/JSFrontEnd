@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import {useHistory} from "react-router-dom";
-import {Link} from "react-router-dom";
 
 export default function Register({setToken},props) {
     const history = useHistory();

@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import './Login.css';
 import PropTypes from 'prop-types';
 import axios from "axios";
-import {Link, Redirect, useHistory} from "react-router-dom";
 
 // function loginUser(user) {
 //     return fetch(`http://localhost:5000/users/${id}`)
