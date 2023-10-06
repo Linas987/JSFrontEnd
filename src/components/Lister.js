@@ -7,7 +7,7 @@ export default function Lister() {
     const [error,setError]=useState(null);
     useEffect(()=> {
         setLoading(true);
-        fetch(`http://localhost:5000/users`)
+        fetch(`https://jsazureapi.azurewebsites.net/users`)
             .then((response) =>
                 response.json()
             )

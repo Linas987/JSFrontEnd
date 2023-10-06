@@ -20,7 +20,7 @@ function App(props){
     let me =props.props;
     const remove = async (e) => {
       axios
-          .delete(`http://localhost:5000/users/`+me.id)
+          .delete(`https://jsazureapi.azurewebsites.net/users/`+me.id)
           .then((res) => {
               logout();
           })

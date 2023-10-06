@@ -34,7 +34,7 @@ export function Nav() {
     return(
     <header id="header" className="header is--white">
         <div className={"row"} style={{color: 'white', padding: '1%'}}>
-            <h1 className={"col"} >Portfolio</h1>
+            <h1 className={"col"} >CRUD</h1>
             <h2 className={"col"}>{(()=>{if(me){return(me.name)}})()}</h2>
         </div>
         <div className="container">

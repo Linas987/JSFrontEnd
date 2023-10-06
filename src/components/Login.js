@@ -3,14 +3,6 @@ import './Login.css';
 import PropTypes from 'prop-types';
 import axios from "axios";
 
-// function loginUser(user) {
-//     return fetch(`http://localhost:5000/users/${id}`)
-//         .then((response) =>
-//             response.json()
-//         )
-// }
-
-
 export default function Login({setToken}) {
 
     const [user, setUser] = useState({
@@ -27,7 +19,7 @@ export default function Login({setToken}) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios
-            .post(`http://localhost:5000/auth`, user)
+            .post(`https://jsazureapi.azurewebsites.net/auth`, user)
             .then((res) => {
                 //console.log("~ res", res)
                 console.log("~ res", res.data)

@@ -2,18 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom";
 
-// import ReactDOM from "react-dom";
-// import * as THREE from "three";
-// import { Markup } from 'interweave';
-
-// const RenderHTML=()=>{
-//     const htmlPart=fetch('http://localhost:5000')
-//     console.log(htmlPart)
-//     return(
-//         <div dangerouslySetInnerHTML={ {__html: htmlPart} } />
-//     )
-// }
-
 function Update({props,setToken}){
   let me =props;
     const history = useHistory();
@@ -33,7 +21,7 @@ function Update({props,setToken}){
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios
-          .put(`http://localhost:5000/users/`+me.id,user)
+          .put(`https://jsazureapi.azurewebsites.net/users/`+me.id,user)
           .then((res) => {
             //console.log("~ res", res)
             console.log("~ res", res.data)

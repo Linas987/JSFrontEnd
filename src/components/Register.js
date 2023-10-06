@@ -22,7 +22,7 @@ export default function Register({setToken},props) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios
-            .post(`http://localhost:5000/users`, user)
+            .post(`https://jsazureapi.azurewebsites.net/users`, user)
             .then((res) => {
                 //console.log("~ res", res)
                 console.log("~ res", res.data)
