@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "axios": "^0.21.1",
-    "prop-types": "^15.7.2",
-    "react-navigation": "^4.4.4"
+    "prop-types": "^15.7.2"
   }
 }
