@@ -19,6 +19,13 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Install Dependencies and Build
+        id: install
+        run: |
+          # Add the --force flag to npm install to force dependency resolution
+          npm install --force
+          # Run your build command here (if applicable)
+          # For example: npm run build
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
