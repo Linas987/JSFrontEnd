@@ -20,11 +20,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '18.x'
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
 
       - name: npm install, build, and test
         run: |
           npm install
-          npm run --openssl-legacy-provider start
+          npm run build 
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
