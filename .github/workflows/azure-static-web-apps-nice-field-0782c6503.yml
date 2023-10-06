@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: "17"
         env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
+          NODE_OPTIONS: --openssl-legacy-provider
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
