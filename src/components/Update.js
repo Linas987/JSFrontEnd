@@ -18,8 +18,19 @@ function Update({props,setToken}){
 
     const { password, name, surname, email } = user;
 
+    const emailValidation=(email)=>{
+      const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      if(email!="" && regex.test(email) === false){
+          alert("email not valid");
+          return false;
+      }
+      return true;
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if(emailValidation(user.email))
+        {
         axios
           .put(`https://jsazureapi.azurewebsites.net/users/`+me.id,user)
           .then((res) => {
@@ -43,11 +54,12 @@ function Update({props,setToken}){
             }else{
                 alert("Username taken");
             }
-        })
+          })
           .catch((error) => {
               console.log(error);
               alert("cant update account");
           });
+        }
         console.log("Out side handle");
     };
 
