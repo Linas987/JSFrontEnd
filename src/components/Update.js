@@ -19,7 +19,9 @@ function Update({props,setToken}){
     const { password, name, surname, email } = user;
 
     const emailValidation=(email)=>{
+      // eslint-disable-next-line
       const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      // eslint-disable-next-line
       if(email!="" && regex.test(email) === false){
           alert("email not valid");
           return false;
